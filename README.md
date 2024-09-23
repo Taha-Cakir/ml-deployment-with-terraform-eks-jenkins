@@ -62,7 +62,7 @@ terraform apply -auto-approve
 
 **Run the pipeline, and Jenkins will:**
 
-Build the Docker image for your FastAPI ML model.
-Push the Docker image to ECR.
-Deploy the FastAPI app on EKS using Kubernetes manifests.
+- Build the Docker image for your FastAPI ML model.
+- Push the Docker image to ECR.
+- Deploy the FastAPI app on EKS using Kubernetes manifests.
 
