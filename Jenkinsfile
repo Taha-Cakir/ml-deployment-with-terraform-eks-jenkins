@@ -7,6 +7,15 @@ pipeline {
         AWS_DEFAULT_REGION = "<AWS_REGION>"
     }
     stages {
+        stage("Build and Push Docker Image to ECR'") {
+            steps {
+                script {
+                    dir('ml-model-service/docker') {
+                        sh './build-ecr.sh'
+                    }
+                }
+            }
+        }
         stage("Creating an EKS Cluster") {
             steps {
                 script {
